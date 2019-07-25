@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 export default class VerifiedItemCard extends Component {
 
-<<<<<<< HEAD:wikitrash/src/components/VerifiedItemCard.js
   locationList = () => {
     let locationsArray = this.props.item.locations.split("; ");
     let locationsMap = locationsArray.map((location) => {
@@ -29,9 +28,6 @@ export default class VerifiedItemCard extends Component {
     }
   }
 
-
-=======
->>>>>>> parent of bff194b... Fix bug to display None when no references or locations are added:wikitrash-react/src/components/VerifiedItemCard.js
   render() {
     return (
       <div className="Verified-card">
