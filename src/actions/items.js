@@ -10,6 +10,9 @@ function fetchItems() {
   }
 }
 
+// production: fetch('https://developer-wikitrash.herokuapp.com/db')
+// development: fetch('http://localhost:3000/db')
+
 function addItem(item) {
   fetch('https://developer-wikitrash.herokuapp.com/item', {
       method: 'POST',
@@ -21,6 +24,9 @@ function addItem(item) {
   return { type: "ADD_ITEM", item }
 }
 
+// production: fetch('https://developer-wikitrash.herokuapp.com/item', {
+// development: fetch('http://localhost:3000/item', {
+
 function searchItems(name) {
   fetch('https://developer-wikitrash.herokuapp.com/item', {
       method: 'PUT',
@@ -31,6 +37,9 @@ function searchItems(name) {
 
   return(dispatch) => { dispatch({ type: 'SEARCH_ITEMS', payload: name })}
 }
+
+// production: fetch('https://developer-wikitrash.herokuapp.com/item', {
+// development: fetch('http://localhost:3000/item', {
 
 function resetSearchItem() {
   return(dispatch) => { dispatch({ type: 'RESET_SEARCH_ITEM'})}
@@ -48,6 +57,9 @@ function upVoteItem(item) {
   return { type: 'UPVOTE_ITEM', item }
 }
 
+// production: fetch('https://developer-wikitrash.herokuapp.com/item', {
+// development: fetch('http://localhost:3000/item', {
+
 function downVoteItem(item) {
   const downVoteItem = item
   fetch('https://developer-wikitrash.herokuapp.com/item', {
@@ -60,6 +72,9 @@ function downVoteItem(item) {
 
   return { type: 'DOWNVOTE_ITEM', downVoteItem }
 }
+
+// production: fetch('https://developer-wikitrash.herokuapp.com/item', {
+// development: fetch('http://localhost:3000/item', {
 
 export {
   addItem,

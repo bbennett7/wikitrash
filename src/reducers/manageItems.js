@@ -8,8 +8,13 @@ export default function manageItems(state = {loading: false, items: [], searchIt
 
     case 'ADD_ITEM':
       console.log({...state, items: [...state.items, action.item]})
-      
-      return {...state, items: [...state.items, Object.assign(action.item, {verified: false, downvotes: 0, upvotes: 0})]};
+      let recyclable = "false"
+
+      if ({action.item.recyclable === "true"}) {
+        recyclable = true
+      }
+
+      return {...state, items: [...state.items, Object.assign(action.item, {recyclable: recyclable, verified: false, downvotes: 0, upvotes: 0})]};
 
     case 'SEARCH_ITEMS':
       let item = []
