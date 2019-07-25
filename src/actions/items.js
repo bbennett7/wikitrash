@@ -27,7 +27,7 @@ function searchItems(name) {
       body: JSON.stringify({item: {name: name, searches: true}}),
       headers:{
         'Content-Type': 'application/json'
-      }})
+      }}).then(console.log("Success"))
 
   return(dispatch) => { dispatch({ type: 'SEARCH_ITEMS', payload: name })}
 }
