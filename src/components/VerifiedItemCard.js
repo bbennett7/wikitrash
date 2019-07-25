@@ -28,6 +28,14 @@ export default class VerifiedItemCard extends Component {
     }
   }
 
+  recyclable = () => {
+    if (this.props.item.recyclable === true) {
+      return "Yes"
+    } else {
+      return "No"
+    }
+  }
+
   render() {
     return (
       <div className="Verified-card">
@@ -35,9 +43,10 @@ export default class VerifiedItemCard extends Component {
         <img src={this.props.item.image} alt={this.props.item.name} height="60vh" width="60vh"/>
 
         <ul>
-          <li><strong>rules:</strong> {this.props.item.rules}</li>
-          <li><strong>where to recycle:</strong> {this.props.item.locations}</li>
-          <li><strong>references:</strong> {this.props.item.references}</li>
+          <li><strong>Recyclable:</strong> {this.recyclable()}</li>
+          <li><strong>Rules:</strong> {this.props.item.rules}</li>
+          <li><strong>Where to recycle:</strong> {this.props.item.locations}</li>
+          <li><strong>References:</strong> {this.props.item.references}</li>
         </ul>
       </div>
     )

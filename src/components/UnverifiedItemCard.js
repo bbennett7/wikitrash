@@ -27,12 +27,21 @@ class UnverifiedItemCard extends Component {
     })
   }
 
+  recyclable = () => {
+    if (this.props.item.recyclable === true) {
+      return "Yes"
+    } else {
+      return "No"
+    }
+  }
+
   render() {
     return (
       <div className="Unverified-card">
         <h4 className="Title">{this.props.item.name}</h4>
         <img src={this.props.item.image} alt={this.props.item.name} height="60vh" width="60vh"/>
         <ul>
+          <li><strong>Recyclable:</strong> {this.recyclable()}</li>
           <li><strong>Rules:</strong> {this.props.item.rules}</li>
           <li><strong>Where to recycle:</strong> <ul> {this.locationList()} </ul></li>
           <li><strong>References:</strong> <ol> {this.referenceList()} </ol> </li>
