@@ -7,13 +7,13 @@ class TopSearchesContainer extends Component {
   renderCards = () => {
     const itemsArray = [...this.props.items]
     const verifiedArray = itemsArray.filter((item) => item.verified === true)
-    
+
     verifiedArray.sort(function (a, b) {
       return b.searches - a.searches;
     });
-    const topSix = verifiedArray.slice(0, 6)
+    const topFive = verifiedArray.slice(0, 5)
 
-    return topSix.map((item) => {
+    return topFive.map((item) => {
       return <VerifiedItemCard item={item} />
     })
   }
