@@ -45,8 +45,8 @@ export default class VerifiedItemCard extends Component {
         <ul>
           <li><strong>Recyclable:</strong> {this.recyclable()}</li>
           <li><strong>Rules:</strong> {this.props.item.rules}</li>
-          <li><strong>Where to recycle:</strong> {this.props.item.locations}</li>
-          <li><strong>References:</strong> {this.props.item.references}</li>
+          <li><strong>Where to recycle:</strong> {this.locationList()}</li>
+          <li><strong>References:</strong> {this.referenceList()}</li>
         </ul>
       </div>
     )
