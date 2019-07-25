@@ -15,7 +15,7 @@ class UnverifiedItemCard extends Component {
 
   locationList = () => {
     let locationsArray = this.props.item.locations.split("; ");
-    if (locationsArray === []) {
+    if (locationsArray[0] === '') {
       return <li>None</li>
     } else {
       return locationsArray.map((location) => {
@@ -26,7 +26,7 @@ class UnverifiedItemCard extends Component {
 
   referenceList = () => {
     let referencesArray = this.props.item.references.split("; ");
-    if (referencesArray === []) {
+    if (referencesArray[0] === '') {
       return referencesArray.map((reference) => {
         return <li>None</li>
       }
