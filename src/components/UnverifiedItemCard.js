@@ -30,7 +30,7 @@ class UnverifiedItemCard extends Component {
       return referencesArray.map((reference) => {
         return <li>None</li>
       }
-      }) else {
+      } else {
         return <li><a href={reference} target="blank">{reference}</a></li>
       }
   }
