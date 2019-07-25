@@ -10,7 +10,7 @@ export default function manageItems(state = {loading: false, items: [], searchIt
       console.log({...state, items: [...state.items, action.item]})
       let recyclable = false
 
-      if ({action.item.recyclable === "true"}) {
+      if (action.item.recyclable === "true") {
         recyclable = true
       }
 
