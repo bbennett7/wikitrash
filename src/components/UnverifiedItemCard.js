@@ -20,7 +20,7 @@ class UnverifiedItemCard extends Component {
     } else {
       return locationsArray.map((location) => {
         return <li>{location}</li>
-      })    
+      })
     }
   }
 
@@ -29,10 +29,10 @@ class UnverifiedItemCard extends Component {
     if (referencesArray === []) {
       return referencesArray.map((reference) => {
         return <li>None</li>
+      }
       }) else {
         return <li><a href={reference} target="blank">{reference}</a></li>
       }
-    }
   }
 
   recyclable = () => {
