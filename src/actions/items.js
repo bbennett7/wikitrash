@@ -3,7 +3,7 @@ function fetchItems() {
   console.log("c")
   return(dispatch) => {
     dispatch({type: 'LOADING_ITEMS'});
-    return fetch('http://localhost:3000/db')
+    return fetch('https://developer-wikitrash.herokuapp.com/db')
       .then(response => { return response.json() })
       .then(responseJSON => { return responseJSON})
       .then(items => {
@@ -14,7 +14,7 @@ function fetchItems() {
 }
 
 function addItem(item) {
-  fetch('http://localhost:3000/item', {
+  fetch('https://developer-wikitrash.herokuapp.com/item', {
       method: 'POST',
       body: JSON.stringify(item),
       headers:{
@@ -25,7 +25,7 @@ function addItem(item) {
 }
 
 function searchItems(name) {
-  fetch('http://localhost:3000/item', {
+  fetch('https://developer-wikitrash.herokuapp.com/item', {
       method: 'PUT',
       body: JSON.stringify({item: {name: name, searches: true}}),
       headers:{
@@ -40,7 +40,7 @@ function resetSearchItem() {
 }
 
 function upVoteItem(item) {
-  fetch('http://localhost:3000/item', {
+  fetch('https://developer-wikitrash.herokuapp.com/item', {
       method: 'PUT',
       body: JSON.stringify({item: {name: item.name, upvotes: true}}),
       headers:{
@@ -53,7 +53,7 @@ function upVoteItem(item) {
 
 function downVoteItem(item) {
   const downVoteItem = item
-  fetch('http://localhost:3000/item', {
+  fetch('https://developer-wikitrash.herokuapp.com/item', {
       method: 'PUT',
       body: JSON.stringify({item: {name: item.name, downvotes: true}}),
       headers:{
