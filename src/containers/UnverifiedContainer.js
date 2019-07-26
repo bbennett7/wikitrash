@@ -33,7 +33,7 @@ class UnverifiedContainer extends Component {
       return (
         <div className="Main">
           <h2>unverified items</h2>
-          <p>Help us keep WikiTrash accurate by voting on the information below.</p>
+          <p>Help us keep WikiTrash accurate by voting on the information below. 10 "yes" votes verifies the item, while 10 "no" votes removes it from WikiTrash.</p>
           <SearchBar searchItems={this.props.searchItems} />
           {this.renderCards()}
         </div>
