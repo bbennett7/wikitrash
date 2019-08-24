@@ -205,6 +205,10 @@ textarea {
   color: white;
 }
 
+.Reference {
+  overflow-wrap: break-word;
+}
+
 .Upvote {
   border: 2px solid rgb(77, 123, 65);
   width: 15%;
@@ -325,7 +329,6 @@ textarea {
 
   .Add-form input[type="submit"] {
     border: 2px solid rgb(77, 123, 65);
-    width: 40%;
     padding: 1% 0%;
     border-radius: 3px;
     color: rgb(77, 123, 65);
@@ -336,9 +339,20 @@ textarea {
     background-color: rgb(77, 123, 65);
     border: 2px solid rgb(77, 123, 65);
     color: white;
-    width: 100%;
     display: block;
   }
 
+  .Verified-card, .Unverified-card {
+    background-color: white;
+    border: 1px solid black;
+    min-height: 100%;
+    width: 95%;
+    padding-top: 1%;
+    padding-right: 2%;
+    margin: 1% 1%;
+  }
 
+  .Reference {
+    padding-right: 2%;
+  }
 }
