@@ -255,9 +255,9 @@ textarea {
   width: 100%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1024px) {
   .App-header {
-    padding: 5% 0% 2.5%;
+    padding: 3% 0% 2.5%;
   }
 
   .Nav-bar a {
