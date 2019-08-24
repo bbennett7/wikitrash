@@ -20,9 +20,11 @@ class TopSearchesContainer extends Component {
 
     render() {
       return (
-        <div className="Main">
-          <h2>top searched items</h2>
-          {this.renderCards()}
+        <div className="Main-grid">
+          <div className="Main">
+            <h2>top searched items</h2>
+            {this.renderCards()}
+          </div>
         </div>
       )
     }

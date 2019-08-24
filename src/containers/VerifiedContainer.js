@@ -28,11 +28,13 @@ class VerifiedContainer extends Component {
 
   render() {
     return (
-      <div className="Main">
-      <h2>all items</h2>
-      <p>The information on disposal of these materials has been vetted by the WikiTrash community.</p>
-        <SearchBar searchItems={this.props.searchItems} />
-        {this.renderCards()}
+      <div className="Main-grid">
+        <div className="Main">
+          <h2>all items</h2>
+          <p>The information on disposal of these materials has been vetted by the WikiTrash community.</p>
+            <SearchBar searchItems={this.props.searchItems} />
+            {this.renderCards()}
+        </div>
       </div>
     )
   }

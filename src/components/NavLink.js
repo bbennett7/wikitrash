@@ -6,7 +6,7 @@ import { resetSearchItem } from '../actions/items'
 class NavLink extends Component {
   render() {
     return (
-      <Link to={this.props.url} onClick={this.props.resetSearchItem}>{this.props.text}</Link>
+      <Link className="Nav-item" id={this.props.id} to={this.props.url} onClick={this.props.resetSearchItem}>{this.props.text}</Link>
     )
   }
 }
